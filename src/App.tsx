@@ -6,6 +6,7 @@ import Home from './paginas/home/Home';
 import Navbar from './components/statics/navbar/Navbar';
 import Footer from './components/statics//footer/Footer';
 import Login from './paginas/login/Login';
+import Sobre from './paginas/sobre/Sobre';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/' element={<Login />} />
+        <Route path='/sobre' element={<Sobre />} />
       </Routes>
       </div>
       
