@@ -8,6 +8,7 @@ import Footer from './components/statics//footer/Footer';
 import Login from './paginas/login/Login';
 import Sobre from './paginas/sobre/Sobre';
 import './App.css';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/' element={<Login />} />
         <Route path='/sobre' element={<Sobre />} />
+        <Route path="/cadastro" element={<CadastroUsuario/>} />
       </Routes>
       </div>
       
