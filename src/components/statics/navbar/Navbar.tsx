@@ -44,9 +44,12 @@ function Navbar() {
                         </Box>
                        <Link to='/login' className='text-decoration-none'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
-                                <Typography variant="h6" color="inherit">
-                                    logout
-                                </Typography>
+                                
+                                <Link to = '/login'>
+                                    <Typography variant="h6" color="inherit">
+                                        logout
+                                    </Typography>
+                                </Link>
                             </Box>
                        </Link>
                     </Box>
