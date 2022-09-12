@@ -22,7 +22,7 @@ function ListaCategoria() {
 
 
   async function getCategoria(){
-    await busca("/categorias", setCategorias,{
+    await busca("/Categorias", setCategorias,{
       headers:{
         'Authorization':token
       }
