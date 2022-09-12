@@ -1,0 +1,12 @@
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+    background-color: #EE8821 !important;
+}
+
+body a{
+    text-decoration: none !important;
+}
+
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+}

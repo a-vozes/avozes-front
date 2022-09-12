@@ -40,7 +40,7 @@ function Login() {
     } 
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid className='containerMenu' container direction='row' justifyContent='center' alignItems='center'>
             <Grid xs={6} alignItems='center'>
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
@@ -65,8 +65,8 @@ function Login() {
                 </Box>
             </Grid>
             <Grid xs={6} style={{
-                backgroundImage: `url(https://media4.giphy.com/media/EoRgG5QnPQVM7978NC/giphy.gif?cid=ecf05e47sn2l6o2xcgw36nvmvq31ly4cersx307gqmosff3v&rid=giphy.gif&ct=g)`, backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover'
+                backgroundImage: `url(https://64.media.tumblr.com/f744d2d984a543e7dfc65f16f7a7c158/c9ceff694b7d0ee4-bc/s500x750/ebb19447948faf22f3d6881a176d71b40df52c99.gifv)`, backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: '300px'
             }}>
 
             </Grid>
