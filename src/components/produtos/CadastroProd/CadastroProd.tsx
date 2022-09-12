@@ -108,7 +108,7 @@ function CadastroProd() {
         }
     
         function back() {
-            navigate("/produtos");
+            navigate("/prods");
           }
 
           return (
@@ -120,7 +120,7 @@ function CadastroProd() {
                   component="h1"
                   align="center"
                 >
-                  Cadastro de produtos:
+                  Cadastro de produto:
                 </Typography>
                 <TextField
                   value={produto.nome}

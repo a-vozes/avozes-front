@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import {Button } from "@material-ui/core";
 import { Box, Modal } from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
-import './ModalPostagem.css';
+import './ModalProduto.css';
 import CadastroCategoria from '../../categorias/cadastroCategoria/CadastroCategoria';
 import CadastroProd from '../CadastroProd/CadastroProd';
 

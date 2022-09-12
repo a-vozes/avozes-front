@@ -10,12 +10,12 @@ import {
 
 import "./listaProdutos.css";
 import { useEffect, useState } from "react";
-import Postagem from "../../../models/Produto";
+import Produtos from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { busca } from "../../../services/Service";
 
 function ListaProdutos() {
-  const [posts, setPosts] = useState<Postagem[]>([]);
+  const [prods, setProds] = useState<Produtos[]>([]);
   const [token, setToken] = useLocalStorage("token");
   let navigate = useNavigate();
 
@@ -26,8 +26,8 @@ function ListaProdutos() {
     }
   }, [token]);
 
-  async function getPost() {
-    await busca("/produtos", setPosts, {
+  async function getProds() {
+    await busca("/prods", setProds, {
       headers: {
         Authorization: token,
       },
@@ -35,12 +35,12 @@ function ListaProdutos() {
   }
 
   useEffect(() => {
-    getPost();
-  }, [posts.length]);
+    getProds();
+  }, [prods.length]);
 
   return (
     <>
-      {posts.map((prod) => (
+      {prods.map((prod) => (
         <Box m={2}>
           <Card variant="outlined">
             <CardContent>
@@ -75,7 +75,7 @@ function ListaProdutos() {
                   </Box>
                 </Link>
                 <Link
-                  to={`/deletarPostagem/${prod.id}`}
+                  to={`/deletarProdutos/${prod.id}`}
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
