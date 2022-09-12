@@ -20,11 +20,13 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                Produtos
-                            </Typography>
-                        </Box>
+                        <Link to='/prods' className='text-decoration-none'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Produtos
+                                </Typography>
+                            </Box>
+                        </Link>
                         <Link to='/sobre' className='text-decoration-none'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
                                 <Typography variant="h6" color="inherit">
