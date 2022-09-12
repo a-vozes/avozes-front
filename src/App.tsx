@@ -9,23 +9,30 @@ import Login from './paginas/login/Login';
 import Sobre from './paginas/sobre/Sobre';
 import './App.css';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
+import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
+import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
+import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 
 function App() {
   return (
     <Router>
-        <Navbar />
+      <Navbar />
 
-        <div style={{minHeight: '100vh'}}>
-      <Routes>
-        <Route path='/home' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/' element={<Login />} />
-        <Route path='/sobre' element={<Sobre />} />
-        <Route path="/cadastro" element={<CadastroUsuario/>} />
-      </Routes>
+      <div style={{ minHeight: '100vh' }}>
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/' element={<Login />} />
+          <Route path='/sobre' element={<Sobre />} />
+          <Route path="/cadastro" element={<CadastroUsuario />} />
+          <Route path='/Categorias' element={<ListaCategoria />} />
+          <Route path="/formularioCategoria" element={<CadastroCategoria />} />
+          <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
+          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+        </Routes>
       </div>
-      
-        <Footer />
+
+      <Footer />
     </Router>
   );
 }

@@ -32,16 +32,20 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
+                        <Link to='/Categorias' className='text-decoration-none'>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
                                 Categorias
                             </Typography>
                         </Box>
+                        </Link>
+                        <Link to='/formularioCategoria' className='text-decoration-none'>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
                                 Cadastrar categorias
                             </Typography>
                         </Box>
+                        </Link>
                        <Link to='/login' className='text-decoration-none'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
                                 
