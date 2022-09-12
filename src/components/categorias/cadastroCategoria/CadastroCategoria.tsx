@@ -1,9 +1,9 @@
 import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
-import './CadastroTema.css';
+import './CadastroCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
-import Tema from '../../../models/Categoria';
+import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
 
 
@@ -13,7 +13,7 @@ function CadastroCategoria() {
     const [token, setToken] = useLocalStorage('token');
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
-        descricao: ''
+        tipoConselho: ''
     })
 
     useEffect(() => {
