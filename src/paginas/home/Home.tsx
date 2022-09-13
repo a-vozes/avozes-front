@@ -24,7 +24,7 @@ function Home() {
                   align="center"
                   className="titulo-h3"
                 >
-                  Avozes Vai corinthians
+                  Avozes
                 </Typography>
                 <Typography
                   variant="h5"

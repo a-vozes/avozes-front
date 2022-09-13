@@ -28,6 +28,13 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
+                        <Link to='/formularioProd' className='text-decoration-none'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Cadastrar Produtos
+                                </Typography>
+                            </Box>
+                        </Link>
                         <Link to='/sobre' className='text-decoration-none'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
                                 <Typography variant="h6" color="inherit">

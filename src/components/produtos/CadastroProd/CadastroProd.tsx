@@ -151,7 +151,7 @@ function CadastroProd() {
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     onChange={(e) =>
-                      buscaId(`/Categorias/${e.target.value}`, setCategorias, {
+                      buscaId(`/Categorias/${e.target.value}`, setCategoria, {
                         headers: {
                           Authorization: token,
                         },

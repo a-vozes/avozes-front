@@ -60,7 +60,7 @@ function ListaProdutos() {
             <CardActions>
               <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link
-                  to={`/formularioProdutos/${prod.id}`}
+                  to={`/formularioProd/${prod.id}`}
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
