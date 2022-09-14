@@ -32,7 +32,7 @@ function CadastroProd() {
         }
     }, [token]);
 
-    const [categoria, setCategoria] = useState<Categoria>({
+    const [cate, setCategoria] = useState<Categoria>({
         id: 0,
         tipoConselho: "",
     });
@@ -51,7 +51,7 @@ function CadastroProd() {
     useEffect(() => {
         setProduto({
             ...produto,
-            categoria: categoria
+            categoria: cate
         });
     }, [categorias]);
 
@@ -84,7 +84,7 @@ function CadastroProd() {
         setProduto({
           ...produto,
           [e.target.name]: e.target.value,
-          categoria: categoria,
+          categoria: cate,
         });
       }
 
@@ -92,6 +92,7 @@ function CadastroProd() {
         e.preventDefault();
 
         if (id !== undefined) {
+          console.log(produto)
             put(`/Produtos`, produto, setProduto, {
               headers: {
                 'Authorization': token
@@ -99,6 +100,7 @@ function CadastroProd() {
             })
             alert("Produto atualizado com sucesso!");
           } else {
+            console.log(produto)
             post(`/Produtos`, produto, setProduto, {
               headers: {
                 'Authorization': token
@@ -211,8 +213,8 @@ function CadastroProd() {
                       })
                     }
                   >
-                    {categorias.map(categoria => (
-                      <MenuItem value={categoria.id}>{categoria.tipoConselho}</MenuItem>
+                    {categorias.map(cate => (
+                      <MenuItem value={cate.id}>{cate.tipoConselho}</MenuItem>
                     ))}
                   </Select>
                   <FormHelperText>Escolha uma categoria para o produto.</FormHelperText>
