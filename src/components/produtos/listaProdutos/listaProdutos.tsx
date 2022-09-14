@@ -27,7 +27,7 @@ function ListaProdutos() {
   }, [token]);
 
   async function getProds() {
-    await busca("/prods", setProds, {
+    await busca("/Produtos", setProds, {
       headers: {
         Authorization: token,
       },
@@ -52,6 +52,18 @@ function ListaProdutos() {
               </Typography>
               <Typography variant="body2" component="p">
                 {prod.descricao}
+              </Typography>
+              <Typography variant="body2" component="p">
+                {prod.nascimento}
+              </Typography>
+              <Typography variant="body2" component="p">
+                {prod.genero}
+              </Typography>
+              <Typography variant="body2" component="p">
+                {prod.preco}
+              </Typography>
+              <Typography variant="body2" component="p">
+                {prod.foto}
               </Typography>
               <Typography variant="body2" component="p">
                 {prod.categoria?.tipoConselho}

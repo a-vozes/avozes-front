@@ -16,6 +16,8 @@ import Categoria from "../../../models/Categoria";
 import useLocalStorage from 'react-use-localstorage';
 import Produto from "../../../models/Produto";
 import { busca, buscaId, post, put }  from "../../../services/Service";
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { makeStyles } from '@material-ui/core/styles';
 
 function CadastroProd() {
     let navigate = useNavigate();
@@ -70,7 +72,7 @@ function CadastroProd() {
     }
 
     async function findByIdProduto(id: string){
-        await buscaId(`produtos/${id}`, setCategoria, {
+        await buscaId(`Produtos/${id}`, setCategoria, {
             headers: {
                 Authorization: token,
             },
@@ -90,21 +92,21 @@ function CadastroProd() {
         e.preventDefault();
 
         if (id !== undefined) {
-            put(`/produtos`, produto, setProduto, {
+            put(`/Produtos`, produto, setProduto, {
               headers: {
-                Authorization: token,
-              },
-            });
+                'Authorization': token
+              }
+            })
             alert("Produto atualizado com sucesso!");
           } else {
-            post(`/produtos`, produto, setProduto, {
+            post(`/Produtos`, produto, setProduto, {
               headers: {
-                Authorization: token,
-              },
-            });
+                'Authorization': token
+              }
+            })
             alert("Produto cadastrado com sucesso!");
           }
-          back();
+          back()
         }
     
         function back() {
@@ -126,7 +128,7 @@ function CadastroProd() {
                   value={produto.nome}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
                   id="nome"
-                  label="Título"
+                  label="Nome"
                   variant="outlined"
                   placeholder="Insira no mínimo 3 caracteres"
                   name="nome"
@@ -137,13 +139,64 @@ function CadastroProd() {
                   value={produto.descricao}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
                   id="descricao"
-                  label="Texto"
+                  label="Descrição"
                   name="descricao"
                   variant="outlined"
                   placeholder="Insira no mínimo 5 caracteres"
                   margin="normal"
                   fullWidth
                 />
+
+                <TextField
+                  value={produto.nascimento}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
+                  id="nascimento"
+                  label="Nascimento"
+                  name="nascimento"
+                  variant="outlined"
+                  placeholder="Insira no mínimo 5 caracteres"
+                  margin="normal"
+                  fullWidth
+                />
+
+                <TextField
+                value={produto.genero}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
+                  id="genero"
+                  label="Gênero"
+                  name="genero"
+                  variant="outlined"
+                  placeholder="Insira no mínimo 5 caracteres"
+                  margin="normal"
+                  fullWidth
+                />
+
+                <TextField
+                value={produto.preco}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
+                  id="preco"
+                  label="Preço"
+                  name="preco"
+                  variant="outlined"
+                  placeholder="Insira no mínimo 5 caracteres"
+                  margin="normal"
+                  fullWidth
+                />
+
+                <TextField
+                value={produto.foto}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
+                  id="foto"
+                  label="Insira o link da sua foto"
+                  name="foto"
+                  variant="outlined"
+                  placeholder="Insira no mínimo 5 caracteres"
+                  margin="normal"
+                  fullWidth
+                />
+        
+        
+       
         
                 <FormControl>
                   <InputLabel id="demo-simple-select-helper-label">Categoria</InputLabel>
