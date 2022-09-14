@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Home from './paginas/home/Home';
 import Navbar from './components/statics/navbar/Navbar';
 import Footer from './components/statics//footer/Footer';
@@ -15,9 +16,11 @@ import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCa
 import { Provider } from 'react-redux';
 import store from './store/Store';
 
+
 function App() {
   return (
     <Provider store={store}>
+     <ToastContainer /> 
     <Router>
       <Navbar />
 

@@ -4,9 +4,9 @@ import { Grid, Box, Typography, TextField, Button } from '@mui/material'
 import { Link, useNavigate  } from 'react-router-dom';
 import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
-import useLocalStorage from 'react-use-localstorage';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/Actions';
+import { toast } from 'react-toastify';
 
 function Login() {
 
@@ -37,9 +37,27 @@ function Login() {
         try {
             await login(`/usuarios/logar`, userLogin, setToken)
 
-            alert('Usuario logado com sucesso!')
+            toast.success('Usuário logado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+              });
         } catch (error) {
-            alert('ERRO! Login incorreto, tente novamente!')
+            toast.error('Erro ao logar', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            })
         }
     } 
 
