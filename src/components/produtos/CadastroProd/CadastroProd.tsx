@@ -16,8 +16,7 @@ import Categoria from "../../../models/Categoria";
 import useLocalStorage from 'react-use-localstorage';
 import Produto from "../../../models/Produto";
 import { busca, buscaId, post, put }  from "../../../services/Service";
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import { makeStyles } from '@material-ui/core/styles';
+
 
 function CadastroProd() {
     let navigate = useNavigate();
@@ -53,7 +52,7 @@ function CadastroProd() {
             ...produto,
             categoria: cate
         });
-    }, [categorias]);
+    }, [cate]);
 
     useEffect(() => {
         getCategorias();
@@ -208,7 +207,7 @@ function CadastroProd() {
                     onChange={(e) =>
                       buscaId(`/Categorias/${e.target.value}`, setCategoria, {
                         headers: {
-                          Authorization: token,
+                          'Authorization': token,
                         },
                       })
                     }
