@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Typography, Box, Grid, Button} from '@mui/material';
 import './Home.css';
-import ModalProdutos from '../../components/produtos/ModelProdutos/ModalProdutos';
-import TabProdutos from '../../components/produtos/TabProdutos/TabProdutos';
+import { useNavigate } from 'react-router-dom';
+import { TokenState } from '../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
+
 
 function Home() {
+
+    let navigate = useNavigate();
+
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+
+      useEffect(() => {
+        if (token == "") {
+            alert("Você precisa estar logado")
+            navigate("/login")
+    
+        }
+    }, [token])
+
     return (
         <>
           <Grid

@@ -5,12 +5,19 @@ import './CadastroCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { addToken } from '../../../store/tokens/Actions';
 
 
 function CadastroCategoria() {
     let history = useNavigate();
     const { id } = useParams<{id: string}>();
-    const [token, setToken] = useLocalStorage('token');
+   
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+      
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         tipoConselho: ''
@@ -19,6 +26,7 @@ function CadastroCategoria() {
     useEffect(() => {
         if (token == "") {
             alert("Você precisa estar logado")
+            dispatch(addToken(token))
             history("/login")
     
         }
@@ -89,3 +97,7 @@ function CadastroCategoria() {
 }
 
 export default CadastroCategoria;
+
+function dispatch(arg0: any) {
+    throw new Error('Function not implemented.');
+}

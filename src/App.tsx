@@ -12,6 +12,8 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
 import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
+import { Provider } from 'react-redux';
+import store from './store/Store';
 
 import CadastroProd from './components/produtos/CadastroProd/CadastroProd';
 import DeletarProdutos from './components/produtos/deletarProdutos/deletarProdutos';
@@ -20,6 +22,7 @@ import ListaProdutos from './components/produtos/listaProdutos/listaProdutos';
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <Navbar />
 
@@ -45,6 +48,7 @@ function App() {
 
       <Footer />
     </Router>
+    </Provider>
   );
 }
 
