@@ -15,6 +15,11 @@ import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCa
 import { Provider } from 'react-redux';
 import store from './store/Store';
 
+import CadastroProd from './components/produtos/CadastroProd/CadastroProd';
+import DeletarProdutos from './components/produtos/deletarProdutos/deletarProdutos';
+import ListaProdutos from './components/produtos/listaProdutos/listaProdutos';
+
+
 function App() {
   return (
     <Provider store={store}>
@@ -32,6 +37,12 @@ function App() {
           <Route path="/formularioCategoria" element={<CadastroCategoria />} />
           <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
           <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+          <Route path="/prods" element={<ListaProdutos />} />
+          <Route path="/formularioProd" element={<CadastroProd />} />
+          <Route path="/formularioProd/:id" element={<CadastroProd />} />
+          <Route path="/deletarProdutos/:id" element={<DeletarProdutos />} />
+
+
         </Routes>
       </div>
 
