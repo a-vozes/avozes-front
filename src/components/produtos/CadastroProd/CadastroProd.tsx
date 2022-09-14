@@ -85,7 +85,7 @@ function CadastroProd() {
     }
 
     async function findByIdProduto(id: string){
-        await buscaId(`Produtos/${id}`, setCategoria, {
+        await buscaId(`/Produtos/${id}`, setProduto, {
             headers: {
                 Authorization: token,
             },
