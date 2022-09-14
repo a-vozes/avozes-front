@@ -50,6 +50,7 @@ function Navbar() {
                             Home
                         </Typography>
                     </Box>
+
                 </Link>
                 <Box mx={1} style={{ cursor: "pointer" }}>
                     <Typography variant="h6" color="inherit">
@@ -61,6 +62,7 @@ function Navbar() {
                         <Typography variant="h6" color="inherit">
                             Sobre
                         </Typography>
+
                     </Box>
                 </Link>
                 <Link to='/Categorias' className='text-decoration-none'>
