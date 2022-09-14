@@ -12,9 +12,12 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
 import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
+import { Provider } from 'react-redux';
+import store from './store/Store';
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <Navbar />
 
@@ -34,6 +37,7 @@ function App() {
 
       <Footer />
     </Router>
+    </Provider>
   );
 }
 

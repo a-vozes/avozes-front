@@ -6,17 +6,25 @@ import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria'
 import {Box} from "@mui/material"
+import { useSelector } from 'react-redux';
+import { addToken } from '../../../store/tokens/Actions';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 function DeletarCategoria() {
     let history = useNavigate();
     const { id } = useParams<{id: string}>();
-    const [token, setToken] = useLocalStorage('token');
+
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+    );
+
     const [categoria, setCategoria] = useState<Categoria>()
 
     useEffect(() => {
         if (token == "") {
             alert("Você precisa estar logado")
+            dispatch(addToken(token))
             history("/login")
     
         }
@@ -84,3 +92,7 @@ function DeletarCategoria() {
   );
 }
 export default DeletarCategoria;
+
+function dispatch(arg0: any) {
+  throw new Error('Function not implemented.');
+}
