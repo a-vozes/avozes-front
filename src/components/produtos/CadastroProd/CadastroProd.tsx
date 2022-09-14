@@ -13,20 +13,34 @@ import {
 import "./CadastroProd.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
-import useLocalStorage from 'react-use-localstorage';
 import Produto from "../../../models/Produto";
 import { busca, buscaId, post, put }  from "../../../services/Service";
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { Action, addToken } from '../../../store/tokens/Actions';
+import { toast } from 'react-toastify';
 
 
 function CadastroProd() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([]);
-    const [token, setToken] = useLocalStorage("token");
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado no site.");
+          toast.error('Você precisa estar logado', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+            });
             navigate("/login");
         }
     }, [token]);
@@ -97,7 +111,16 @@ function CadastroProd() {
                 'Authorization': token
               }
             })
-            alert("Produto atualizado com sucesso!");
+            toast.success('Produto atualizado com sucesso!', {
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme: "colored",
+              progress: undefined,
+              });
           } else {
             console.log(produto)
             post(`/Produtos`, produto, setProduto, {
@@ -105,7 +128,16 @@ function CadastroProd() {
                 'Authorization': token
               }
             })
-            alert("Produto cadastrado com sucesso!");
+            toast.success('Produto cadastrado com sucesso!', {
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme: "colored",
+              progress: undefined,
+              });
           }
           back()
         }
@@ -226,3 +258,7 @@ function CadastroProd() {
           );
 }
 export default CadastroProd;
+
+function dispatch(arg0: Action) {
+  throw new Error('Function not implemented.');
+}

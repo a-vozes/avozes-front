@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import ModalProdutos from '../../components/produtos/ModelProdutos/ModalProdutos';
+import TabProdutos from '../../components/produtos/TabProdutos/TabProdutos';
 
 
 function Home() {
