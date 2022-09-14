@@ -1,28 +1,27 @@
-import { ChangeEvent, useEffect, useState } from 'react';
-import {
-    Container,
-    Typography,
-    TextField,
-    Button,
-    Select,
-    InputLabel,
-    MenuItem,
-    FormControl,
-    FormHelperText,
-} from "@material-ui/core";
-import "./CadastroProd.css";
-import { useNavigate, useParams } from "react-router-dom";
-import Categoria from "../../../models/Categoria";
-import useLocalStorage from 'react-use-localstorage';
-import Produto from "../../../models/Produto";
-import { busca, buscaId, post, put }  from "../../../services/Service";
+import React, { ChangeEvent, useEffect, useState } from 'react'
+import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@material-ui/core'
+import { useNavigate, useParams } from 'react-router-dom'
+
+import { useSelector } from 'react-redux';
+import { TokenState } from "../../../store/tokens/tokensReducer";
+
+import { busca, buscaId, post, put } from '../../../services/Service';
+import Categoria from '../../../models/Categoria'
+import Produto from '../../../models/Produto'
+import User from '../../../models/User';
 
 
 function CadastroProd() {
-    let navigate = useNavigate();
-    const { id } = useParams<{ id: string }>();
-    const [categorias, setCategorias] = useState<Categoria[]>([]);
-    const [token, setToken] = useLocalStorage("token");
+  let navigate = useNavigate()
+
+  const { id } = useParams<{ id: string }>()
+
+  const [categorias, setCategorias] = useState<Categoria[]>([])
+
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+  )
+
 
     useEffect(() => {
         if (token == "") {
@@ -71,7 +70,7 @@ function CadastroProd() {
     }
 
     async function findByIdProduto(id: string){
-        await buscaId(`Produtos/${id}`, setCategoria, {
+        await buscaId(`/Produtos/${id}`, setProduto, {
             headers: {
                 Authorization: token,
             },

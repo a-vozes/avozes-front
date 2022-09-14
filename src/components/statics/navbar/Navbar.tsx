@@ -52,11 +52,6 @@ function Navbar() {
                     </Box>
 
                 </Link>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" color="inherit">
-                        Produtos
-                    </Typography>
-                </Box>
                 <Link to='/sobre' className='text-decoration-none'>
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
@@ -72,10 +67,24 @@ function Navbar() {
                     </Typography>
                 </Box>
                 </Link>
+                <Link to='/prods' className='text-decoration-none'>
+                <Box mx={1} style={{ cursor: "pointer" }}>
+                    <Typography variant="h6" color="inherit">
+                        Produtos
+                    </Typography>
+                </Box>
+                </Link>
                 <Link to='/formularioCategoria' className='text-decoration-none'>
                 <Box mx={1} style={{ cursor: "pointer" }}>
                     <Typography variant="h6" color="inherit">
                         Cadastrar categorias
+                    </Typography>
+                </Box>
+                </Link>
+                <Link to='/formularioProd' className='text-decoration-none'>
+                <Box mx={1} style={{ cursor: "pointer" }}>
+                    <Typography variant="h6" color="inherit">
+                        Cadastrar produto
                     </Typography>
                 </Box>
                 </Link>

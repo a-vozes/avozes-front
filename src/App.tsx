@@ -16,13 +16,11 @@ import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCa
 import { Provider } from 'react-redux';
 import store from './store/Store';
 
-<<<<<<< HEAD
-=======
 import CadastroProd from './components/produtos/CadastroProd/CadastroProd';
 import DeletarProdutos from './components/produtos/deletarProdutos/deletarProdutos';
 import ListaProdutos from './components/produtos/listaProdutos/listaProdutos';
 
->>>>>>> 69b759748084503ba41570d6a61ffca1f56af2ca
+
 
 function App() {
   return (
