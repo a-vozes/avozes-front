@@ -6,7 +6,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/Actions';
 import { toast } from 'react-toastify';
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LogoutIcon from '@mui/icons-material/Logout';
+import InfoIcon from '@mui/icons-material/Info';
 
 function Navbar() {
 
@@ -81,7 +83,7 @@ function Navbar() {
                         <Link to='/sobre' className='navbarlink'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
                                 <Typography variant="h6" color="inherit">
-                                    Sobre
+                                <InfoIcon className="redes" />
                                 </Typography>
 
                             </Box>
@@ -90,7 +92,7 @@ function Navbar() {
                         <Link to='/carrinho/:id' className='navbarlink'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
                                 <Typography variant="h6" color="inherit">
-                                    Carrinho
+                                <ShoppingCartIcon className="redes" />
                                 </Typography>
 
                             </Box>
@@ -98,7 +100,7 @@ function Navbar() {
 
                         <Box mx={1} className='navbarlink' onClick={goLogout} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                Logout
+                            <LogoutIcon className="redes" />
                             </Typography>
                         </Box>
                     </Box>
