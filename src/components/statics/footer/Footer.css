@@ -1,0 +1,4 @@
+.degrade {
+    background: rgb(238,136,33);
+    background: linear-gradient(180deg, rgba(238,136,33,1) 30%, rgba(161,80,0,1)70%);
+}
