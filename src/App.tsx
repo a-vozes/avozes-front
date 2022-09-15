@@ -15,16 +15,11 @@ import CadastroCategoria from './components/categorias/cadastroCategoria/Cadastr
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import { Provider } from 'react-redux';
 import store from './store/Store';
-import NotFound from "./paginas/notFound/NotFound";
 
 import CadastroProd from './components/produtos/CadastroProd/CadastroProd';
 import DeletarProdutos from './components/produtos/deletarProdutos/deletarProdutos';
 import ListaProdutos from './components/produtos/listaProdutos/listaProdutos';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 24af8dd26fb0f75ea3974bd013a39f77c91f63fa
 
 function App() {
   return (
@@ -33,24 +28,6 @@ function App() {
       <Router>
         <Navbar />
 
-<<<<<<< HEAD
-      <div style={{ minHeight: '100vh' }}>
-        <Routes>
-          <Route path='/home' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/' element={<Login />} />
-          <Route path='/sobre' element={<Sobre />} />
-          <Route path="/cadastro" element={<CadastroUsuario />} />
-          <Route path='/Categorias' element={<ListaCategoria />} />
-          <Route path="/formularioCategoria" element={<CadastroCategoria />} />
-          <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
-          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
-          <Route path="/prods" element={<ListaProdutos />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/formularioProd" element={<CadastroProd />} />
-          <Route path="/formularioProd/:id" element={<CadastroProd />} />
-          <Route path="/deletarProdutos/:id" element={<DeletarProdutos />} />
-=======
         <div style={{ minHeight: '100vh' }}>
           <Routes>
             <Route path='/home' element={<Home />} />
@@ -66,7 +43,6 @@ function App() {
             <Route path="/formularioProd" element={<CadastroProd />} />
             <Route path="/formularioProd/:id" element={<CadastroProd />} />
             <Route path="/deletarProdutos/:id" element={<DeletarProdutos />} />
->>>>>>> 24af8dd26fb0f75ea3974bd013a39f77c91f63fa
 
 
           </Routes>

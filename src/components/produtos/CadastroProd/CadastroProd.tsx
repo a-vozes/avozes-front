@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@material-ui/core'
-import { useNavigate, useParams } from 'react-router-dom'
-
-import { useSelector } from 'react-redux';
-import { TokenState } from "../../../store/tokens/tokensReducer";
-
-import { busca, buscaId, post, put } from '../../../services/Service';
-import Categoria from '../../../models/Categoria'
-import Produto from '../../../models/Produto'
-import User from '../../../models/User';
-
-
-function CadastroProd() {
-  let navigate = useNavigate()
-
-  const { id } = useParams<{ id: string }>()
-
-  const [categorias, setCategorias] = useState<Categoria[]>([])
-
-  const token = useSelector<TokenState, TokenState["tokens"]>(
-      (state) => state.tokens
-  )
-
-=======
 import { ChangeEvent, useEffect, useState } from 'react';
 import {
     Container,
@@ -54,7 +28,6 @@ function CadastroProd() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
       (state) => state.tokens
     );
->>>>>>> 24af8dd26fb0f75ea3974bd013a39f77c91f63fa
 
     useEffect(() => {
         if (token == "") {
