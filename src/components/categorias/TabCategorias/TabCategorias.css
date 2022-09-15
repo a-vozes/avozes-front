@@ -1,0 +1,9 @@
+.MuiCardContent-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MuiCardContent-root p {
+    font-size: 10px!important;
+}
