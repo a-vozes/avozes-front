@@ -12,13 +12,13 @@ function Navbar() {
 
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
 
     let navigate = useNavigate();
 
     const dispatch = useDispatch();
-    
-    function goLogout(){
+
+    function goLogout() {
         dispatch(addToken(''));
         toast.info('Usuário deslogado', {
             position: "top-right",
@@ -30,77 +30,77 @@ function Navbar() {
             theme: "colored",
             progress: undefined,
         });
-       navigate('/login')
+        navigate('/login')
     }
     var navbarComponent;
 
-    if(token != ""){
-        navbarComponent =  <AppBar position="static">
-        <Toolbar className='navbarContainer' variant="dense">
-            <Box style={{ cursor: "pointer" }} >
-                <Typography variant="h5" color="inherit">
-                    Avozes
-                </Typography>
-            </Box>
+    if (token != "") {
+        navbarComponent =
 
-            <Box display="flex" justifyContent="start">
-                <Link to='/home' className='text-decoration-none'>
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            Home
-                        </Typography>
+            <AppBar position="static">
+                <Toolbar className='navbarContainer' variant="dense">
+
+                    <Box style={{ cursor: "pointer" }} >
+                        <Link to='/home' >
+                            <Typography variant="h5" color="inherit">
+                                <img src="https://cdn.discordapp.com/attachments/1016309304040636426/1019972821079822336/avozes-preto-e-branco.png" alt="" width="13%" height="13%" />
+                            </Typography>
+                        </Link>
                     </Box>
 
-                </Link>
-                <Link to='/sobre' className='text-decoration-none'>
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            Sobre
-                        </Typography>
 
-                    </Box>
-                </Link>
-                <Link to='/Categorias' className='text-decoration-none'>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" color="inherit">
-                        Categorias
-                    </Typography>
-                </Box>
-                </Link>
-                <Link to='/prods' className='text-decoration-none'>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" color="inherit">
-                        Produtos
-                    </Typography>
-                </Box>
-                </Link>
-                <Link to='/formularioCategoria' className='text-decoration-none'>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" color="inherit">
-                        Cadastrar categorias
-                    </Typography>
-                </Box>
-                </Link>
-                <Link to='/formularioProd' className='text-decoration-none'>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" color="inherit">
-                        Cadastrar produto
-                    </Typography>
-                </Box>
-                </Link>
-                <Box mx={1} className='text-decoration-none' onClick={goLogout} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            logout
-                        </Typography>
-                    </Box>
-            </Box>
+                    <Box mx={1} className='navbarContainer2' style={{ cursor: "pointer" }}>
 
-        </Toolbar>
-    </AppBar>
+
+                        <Link to='/prods' className='navbarlink'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Avós
+                                </Typography>
+
+                            </Box>
+                        </Link>
+
+
+                        <Link to='/Categorias' className='navbarlink'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Conselhos
+                                </Typography>
+                            </Box>
+                        </Link>
+
+                        <Link to='/formularioCategoria' className='navbarlink'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Novo conselho
+                                </Typography>
+                            </Box>
+                        </Link>
+
+                        <Link to='/sobre' className='navbarlink'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Sobre
+                                </Typography>
+
+                            </Box>
+                        </Link>
+
+                        <Box mx={1} className='navbarlink' onClick={goLogout} style={{ cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit">
+                                Logout
+                            </Typography>
+                        </Box>
+                    </Box>
+
+                </Toolbar>
+
+            </AppBar >
     }
     return (
         <>
-           {navbarComponent}
+            {navbarComponent}
         </>
     )
 }

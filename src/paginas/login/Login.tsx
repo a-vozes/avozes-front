@@ -7,6 +7,7 @@ import UserLogin from '../../models/UserLogin';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/Actions';
 import { toast } from 'react-toastify';
+import { FilledInput } from '@mui/material';
 
 function Login() {
 
@@ -64,13 +65,15 @@ function Login() {
     return (
         <Grid className='containerMenu' container direction='row' justifyContent='center' alignItems='center'>
             <Grid xs={6} alignItems='center'>
-                <Box paddingX={20}>
+                <Box className="formLogin" paddingX={20}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' align='center'> ENTRAR </Typography>
-                        <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='Usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField  value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' fullWidth type='password' />
+                        <Typography variant='h3' gutterBottom color='textPrimary' align='center' className="texto"> ENTRAR </Typography>
+                        <TextField className="loginBtn"value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='Usuario' variant='filled' name='usuario' margin='normal' fullWidth InputLabelProps={{
+'aria-label': 'weight'
+  }}/>
+                        <TextField className="passBtn" value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' variant='filled' name='senha' margin='normal' fullWidth type='password' />
                         <Box marginTop={2} textAlign='center'>
-                                <Button type='submit' variant='contained' color='primary'>
+                                <Button className="logarBtn"type='submit' variant='contained'>
                                     Logar
                                 </Button>
                         </Box>

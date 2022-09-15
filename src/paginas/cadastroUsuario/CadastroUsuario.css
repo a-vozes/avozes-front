@@ -1,17 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
 .imagem{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+    background-image: url(https://64.media.tumblr.com/f744d2d984a543e7dfc65f16f7a7c158/c9ceff694b7d0ee4-bc/s500x750/ebb19447948faf22f3d6881a176d71b40df52c99.gifv);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
     width: 100vh;
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
 }
 
-.texto2{
-    font-weight: bold!important;
+.textos2{
+    font-family: 'Roboto', sans-serif;
+    color: #000000 !important; /* mudar cor do cadastrar*/
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    display: flex;
+    flex-direction: row;
+  }
+
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+ border: none !important
+}
+
+.registerName label, 
+.registerFoto label, 
+.registerPass label, 
+.registerPass2 label, 
+.registerUser label{
+    border-bottom-color: #5380b1;
+    color: black !important;
+    margin-bottom: 5px;
+}
+
+
+
+.registerName{
+    font-family: 'Roboto', sans-serif;
+  background-color: #4d647c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #3a5470;
+  transition: 0.25s border;
+  padding: 0 15px;
+  height: 56px;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 20px;
+  transition: 0.25s color
 }
 
 .btnCancelar{
-    margin-left: 20px!important;
-    background-color: red!important;
+    top:50% !important;
+    background-color:#fd3737 !important;
+    color: #fff !important;
+    border:none !important; 
+    border-radius:15px !important; 
+    padding: 7px !important; 
+    min-height:30px !important; 
+    min-width: 120px !important;
+}
+
+.btnCadastrar{
+    top:50% !important;
+    background-color:#4d96ac !important;
+    color: #fff !important;
+    border:none !important; 
+    border-radius:15px !important; 
+    padding: 7px !important; 
+    min-height:30px !important; 
+    min-width: 120px !important;
+    margin-left: 20px !important;
+}
+
+.fundo{
+    height: 100%;
+    color: white;
+    background-color: #3a5470;
+    font-family: 'Roboto', sans-serif
 }

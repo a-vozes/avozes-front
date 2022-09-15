@@ -13,15 +13,31 @@ import { useEffect, useState } from "react";
 import Produtos from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { busca } from "../../../services/Service";
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { Action, addToken } from "../../../store/tokens/Actions";
+import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function ListaProdutos() {
   const [prods, setProds] = useState<Produtos[]>([]);
-  const [token, setToken] = useLocalStorage("token");
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
   let navigate = useNavigate();
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
+        dispatch(addToken(token))
       navigate("/login");
     }
   }, [token]);
@@ -111,3 +127,7 @@ function ListaProdutos() {
 }
 
 export default ListaProdutos;
+
+function dispatch(arg0: Action) {
+  throw new Error("Function not implemented.");
+}

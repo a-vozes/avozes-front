@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  /* Fundo do login*/
+  .containerMenu{
+    height: 100%;
+    color: white;
+    background-color: #1d4269;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    display: flex;
+    flex-direction: row;
+  }
+
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+ border: none !important
+}
+
+ .loginBtn{
+  font-family: 'Roboto', sans-serif;
+  background-color: #53a2b9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #53a2b9;
+  transition: 0.25s border;
+  padding: 0 15px;
+  height: 56px;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 20px;
+  transition: 0.25s color
+ }
+
+ .loginBtn label{
+    border-bottom-color: #53a2b9;
+    color: black !important;
+    margin-bottom: 5px;
+ }
+
+ .passBtn {
+    font-family: 'Roboto', sans-serif;
+  background-color: #53a2b9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #53a2b9;
+  transition: 0.25s border;
+  padding: 0 15px;
+  height: 56px;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 20px;
+  transition: 0.25s color
+
+ }
+
+ .passBtn label {
+    border-bottom-color: #53a2b9;
+    color: black !important;
+    margin-bottom: 5px;
+ }
+
+ .logarBtn {
+    
+    top:50% !important;
+    background-color:#f1963b !important;
+    color: #fff !important;
+    border:none !important; 
+    border-radius:15px !important; 
+    padding: 7px !important; 
+    min-height:30px !important; 
+    min-width: 120px !important;
+  }
+
+
