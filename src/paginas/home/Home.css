@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.container-home {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f9f8d6 ;
+    height: 35rem;
+    width: 100%;
+    justify-content:space-between ;
+    justify-items: center;
+    padding: 0.7rem;
+}
+
+.container-bv-btn {
+    margin-right: 7rem;
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.img-bv-home img {
+  
+    height: 20rem;
+    margin-top: 4rem;
+    padding-right: 10rem
+}
+
+.bv-btn {
+    background-color: #2884A1 ;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000 !important;
+  display: flex;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.bv-btn:focus {
+    outline: 0;
+  }
+
+.bv-btn:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    border-radius: 8px !important;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+  }
+
+  .bv-btn:hover:after {
+    bottom: 2px;
+    left: 2px;
+  }
+
+  @media (min-width: 768px) {
+    .bv-btn {
+      padding: .75rem 3rem;
+      font-size: 1.25rem;
+      border-radius: 8px !important;
+    }
+  }
+
+  .bv-btn button {
+    background-color: #2884A1 ;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000 !important;
+    border-radius: 15px !important;
+    display: flex;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
