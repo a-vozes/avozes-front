@@ -58,9 +58,9 @@ function ListaCategoria() {
             <Card variant="outlined">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Categoria
+                  Tipo de conselho
                 </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography variant="h6" component="h2"  >
                   {categorias.tipoConselho}
                 </Typography>
               </CardContent>
