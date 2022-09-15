@@ -108,75 +108,78 @@ function CadastroUsuario() {
     */
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid className="fundo"container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
 
                     <form onSubmit={cadastrar}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
 
-                        <TextField
+                        <TextField className='registerName'
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             value={user.nome}
                             id='nome'
                             label='nome'
-                            variant='outlined'
+                            variant='filled'
                             name='nome'
                             margin='normal'
                             fullWidth
                             required /> {/* Required: indica que o campo deve ser preenchido */}
 
-                        <TextField
+                        <TextField className='registerName'
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             value={user.usuario}
                             type="email"
                             id='usuario'
                             label='usuario'
-                            variant='outlined'
+                            variant='filled'
                             name='usuario'
                             margin='normal'
                             fullWidth required />
 
 
-                        <TextField
+                        <TextField className='registerName'
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             value={user.senha}
                             id='senha'
                             label='senha'
-                            variant='outlined'
+                            variant='filled'
                             name='senha'
                             margin='normal' type='password'
                             fullWidth required />
 
-                        <TextField
+                        <TextField className='registerName'
                             onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
                             value={confirmarSenha}
                             id='confirmarSenha'
                             label='confirmarSenha'
-                            variant='outlined'
+                            variant='filled'
                             name='confirmarSenha'
                             margin='normal' type='password'
                             fullWidth required />
                         
-                        <TextField
+                        <TextField className='registerName'
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             value={user.foto}
                             id='foto'
                             label='foto'
-                            variant='outlined'
+                            variant='filled'
                             name='foto'
                             margin='normal'
                             fullWidth />
 
                         <Box marginTop={2} textAlign='center'>
+                            <Box className='separarBtn'>
                             <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar'>
                                     Cancelar
                                 </Button>
-                            </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            </Link>                           
+                            
+                            <Button className="btnCadastrar"type='submit' variant='contained' color='primary'>
                                 Cadastrar
                             </Button>
+                            </Box>
                         </Box>
                     </form>
 
