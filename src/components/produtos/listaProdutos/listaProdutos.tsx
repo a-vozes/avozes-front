@@ -20,9 +20,11 @@ import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function ListaProdutos() {
   const [prods, setProds] = useState<Produtos[]>([]);
+
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -36,8 +38,8 @@ function ListaProdutos() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-        });
-        dispatch(addToken(token))
+      });
+      dispatch(addToken(token))
       navigate("/login");
     }
   }, [token]);
@@ -76,13 +78,13 @@ function ListaProdutos() {
                 {prod.genero}
               </Typography>
               <Typography variant="body2" component="p">
-                {prod.preco}
+              Preço: R$ {prod.preco}
               </Typography>
               <Typography variant="body2" component="p">
                 {prod.foto}
               </Typography>
               <Typography variant="body2" component="p">
-                {prod.categoria?.tipoConselho}
+                Categoria: {prod.categoria?.tipoConselho}
               </Typography>
             </CardContent>
             <CardActions>
@@ -117,6 +119,18 @@ function ListaProdutos() {
                     </Button>
                   </Box>
                 </Link>
+
+                <Box display="flex" flexDirection="column" justifyContent="center" mb={1.5}>
+                            <Link to={`/carrinho/${prod.id}`} className="text-decorator-none">
+                                <Box mx={1}>
+                                    <Button variant="contained" size='small' color="secondary">
+                                        Comprar
+                                    </Button>
+                                </Box>
+                            </Link>
+                        </Box>
+
+
               </Box>
             </CardActions>
           </Card>

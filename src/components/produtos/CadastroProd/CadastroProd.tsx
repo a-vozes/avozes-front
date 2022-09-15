@@ -25,6 +25,7 @@ function CadastroProd() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([]);
+    
     const token = useSelector<TokenState, TokenState["tokens"]>(
       (state) => state.tokens
     );

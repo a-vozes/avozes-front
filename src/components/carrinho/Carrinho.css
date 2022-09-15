@@ -1,0 +1,11 @@
+.card{
+    width: 850px!important;
+}
+
+.cardProductInfo{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 50px;
+    width: 250px;
+}

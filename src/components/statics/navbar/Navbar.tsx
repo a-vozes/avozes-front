@@ -87,6 +87,15 @@ function Navbar() {
                             </Box>
                         </Link>
 
+                        <Link to='/carrinho/:id' className='navbarlink'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Carrinho
+                                </Typography>
+
+                            </Box>
+                        </Link>
+
                         <Box mx={1} className='navbarlink' onClick={goLogout} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
                                 Logout
