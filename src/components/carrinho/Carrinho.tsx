@@ -1,10 +1,11 @@
+
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Box, Button, Card, TextField, Typography } from "@mui/material";
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import Produto from '../../models/Produto'
-import { busca, buscaId, post, put }  from "../../services/Service";
+import { busca, buscaId, post, put } from "../../services/Service";
 import { addToken } from '../../store/tokens/Actions'
 import { TokenState } from '../../store/tokens/tokensReducer'
 import './Carrinho.css'
@@ -40,11 +41,11 @@ function Carrinho() {
     nome: "",
     descricao: "",
     nascimento: "",
-    genero: "", 
-    preco: 0, 
+    genero: "",
+    preco: 0,
     foto: "",
     categoria: null
-})
+  })
 
   // Vai disparar a função findByIdProduto sempre que o ID for diferente que Undefined
 
@@ -59,8 +60,8 @@ function Carrinho() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-        });
-        dispatch(addToken(token))
+      });
+      dispatch(addToken(token))
       navigate("/login");
     }
   }, [token]);
@@ -75,63 +76,78 @@ function Carrinho() {
   //   })
   // }
 
-  async function findByIdProduto(id: string){
+  useEffect(() => {
+    if (id !== undefined) {
+      findByIdProduto(id)
+    }
+  }, [id])
+
+  async function findByIdProduto(id: string) {
     await buscaId(`/Produtos/${id}`, setProduto, {
-        headers: {
-            Authorization: token,
-        },
+      headers: {
+        Authorization: token,
+      },
     });
-}
+  }
 
   // Função que vai pegar a quantidade escolhida do Produto
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    let valor = +e.target.value
-    setQuantidadeFinal(valor);
-  }
+  // function handleChange(e: ChangeEvent<HTMLInputElement>) {
+  //   let valor = +e.target.value
+  //   setQuantidadeFinal(valor);
+  // }
 
   // Função que mostra o valor total entre a quantidade e o valor unitário do item. Ex.: 2 * R$2 = 4
   function valorTotal() {
-    return quantidadeFinal * produto.preco
+    return produto.preco
   }
 
   // Função que simula a compra Efetuada com sucesso
   function confirmSales() {
     toast.success('Compra Confirmada! Verifique o seu email!', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
-        theme: "colored",
-        progress: undefined,
-        });
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      theme: "colored",
+      progress: undefined,
+    });
     navigate("/home")
   }
 
   return (
     <>
       <Box m={2} display="flex" justifyContent="center">
+        
         <Card variant="outlined" className='card'>
 
           <div className='cardProduct'>
-            <img src={produto.foto} alt="Img" />
+            
+            <Box display="flex" justifyContent="center">
+              <img src={produto.foto} alt="Img" width="40%" height="40%" />
+              </Box>
 
             <div className='cardProductInfo'>
-              <Typography variant="h5" component="h2">
+
+              <Typography variant="h4" component="h2">
                 {produto.nome}
               </Typography>
 
-              <Typography variant="body2" component="p">
-                R$ {produto.nascimento}
+              <Typography variant="body2" component="p" className='textoDesc'>
+                {produto.descricao}
+              </Typography>
+
+              {/* <Typography variant="body2" component="p">
+                Nascimento: {produto.nascimento}
               </Typography>
 
               <Typography variant="body2" component="p">
-                R$ {produto.descricao}
-              </Typography>
+                Gênero: {produto.genero}
+              </Typography> */}
 
-              <Typography variant="body2" component="p">
-                R$ {produto.preco}
+              <Typography variant="body2" component="p" className='textoCat'>
+                {produto.categoria?.tipoConselho}
               </Typography>
 
               {/* <Typography variant="body2" component="p">
@@ -163,7 +179,7 @@ function Carrinho() {
                 </Box>
               </Box>
 
-              <Link to="/" className="cardProductButton">
+              <Link to="/home" className="cardProductButton">
                 <Box mx={1}>
                   <Button variant="contained" size='small' color="secondary">
                     Cancelar
@@ -182,5 +198,5 @@ function Carrinho() {
 export default Carrinho
 
 function dispatch(arg0: any) {
-    throw new Error('Function not implemented.')
+  throw new Error('Function not implemented.')
 }
