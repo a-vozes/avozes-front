@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+:root {
+
+    --Fontprincipal: 'Roboto', sans-serif;
+}
 .degrade {
     background: rgb(238,136,33);
-    background: linear-gradient(180deg, rgba(238,136,33,1) 30%, rgba(161,80,0,1)70%);
+    background: linear-gradient(to left,#a15000   ,#ee8821 );
 }
