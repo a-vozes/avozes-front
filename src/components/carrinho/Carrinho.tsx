@@ -125,16 +125,16 @@ function Carrinho() {
           <div className='cardProduct'>
             
             <Box display="flex" justifyContent="center">
-              <img src={produto.foto} alt="Img" width="40%" height="40%" />
+              <img src={produto.foto} alt="Img" className='img' />
               </Box>
 
             <div className='cardProductInfo'>
 
-              <Typography variant="h4" component="h2">
+              <Typography variant="h4" component="h2" className='Nome'>
                 {produto.nome}
               </Typography>
 
-              <Typography variant="body2" component="p" className='textoDesc'>
+              <Typography variant="body2" component="p" className='Desc'>
                 {produto.descricao}
               </Typography>
 
@@ -146,9 +146,10 @@ function Carrinho() {
                 Gênero: {produto.genero}
               </Typography> */}
 
-              <Typography variant="body2" component="p" className='textoCat'>
+              <Typography variant="h6" component="h3" className='Cat'>
                 {produto.categoria?.tipoConselho}
               </Typography>
+              
 
               {/* <Typography variant="body2" component="p">
                 Quantidade Máx: {produto.quantidade}
@@ -165,27 +166,30 @@ function Carrinho() {
                 name="quantidade" margin="normal" fullWidth
               /> */}
             </div>
+            <hr />
 
             <div className="cardProductInfo">
               <Typography variant="h5" component="h2">
                 Total: R$ {valorTotal()}
               </Typography>
 
-              <Box className="cardProductButton">
-                <Box mx={1}>
-                  <Button onClick={confirmSales} variant="contained" size='small' color="primary">
-                    Confimar Compra
-                  </Button>
+              <Box display="flex" flexDirection="column" justifyContent="center" mb={1.5} >
+                <Box className="cardProductButton" >
+                  <Box mx={1}>
+                    <Button onClick={confirmSales} variant="contained" size='small' color="primary">
+                      Confimar Compra
+                    </Button>
+                  </Box>
                 </Box>
+                <Link to="/home" className="cardProductButton">
+                  <Box mx={1}>
+                    <Button variant="contained" size='small' color="secondary">
+                      Cancelar
+                    </Button>
+                  </Box>
+                </Link>
               </Box>
 
-              <Link to="/home" className="cardProductButton">
-                <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    Cancelar
-                  </Button>
-                </Box>
-              </Link>
             </div>
 
           </div>

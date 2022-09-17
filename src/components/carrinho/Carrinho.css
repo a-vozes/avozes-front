@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 :root {
 
@@ -10,32 +11,66 @@
     --cor05: #93DEF5;
 
     --Fontprincipal: 'Roboto', sans-serif;
+    --FontTitulo: 'Poppins', sans-serif;
 }
 .card{
     width: 400px!important;
-    border-width: 5px !important;
-    border-radius: 5px !important;
-    border-color: #8c490581 !important;
-    border-style: solid transparent !important;
-    background-color: #ee872165;
+    font-family: var(--FontTitulo) !important;
+    box-shadow: 7px 7px 13px rgba(50, 50, 50, 0.22) !important;
+    padding: 20px !important;
+    margin: 20px !important;
+    transition: all 0.3s ease-out !important;
+    border-left: 8px solid var(--cor01) !important;
     
+}
+.card:hover{
+    transform: translateY(-5px) !important;
+    /* cursor: pointer; */
+
 }
 
 .cardProductInfo{
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    color: #a3a5ae !important;
+    font-size: 12px !important;
 
-    margin-left: 10px;
-    width: 250px;
+    margin-left: 10px !important;
+    width: 250px !important;
+    font-family: var(--Fontprincipal) !important;
+    padding-bottom: 10px !important;
+
+}
+.img{
+    float: right;
+    max-width: 200px;
+    max-height: 200px;
+}
+.Nome{
     font-family: var(--Fontprincipal) !important;
     color: black;
-    padding-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.188);
 }
-.textoDesc{
-    font-size: 1em !important;
+.Desc{
     font-family: var(--Fontprincipal) !important;
+    color: black;
+    font-size: 1.2em;
+    text-align: justify;
+
 }
-.textoCat{
-    font-size: 1.5em !important;
-    font-family: 'Times New Roman', Times, serif !important;
+.Cat{
+    font-family: var(--Fontprincipal) !important;
+    color: var(--cor01);
+    font-weight: bold;
+    font-size: 2em;
+
+}
+
+.cardProductButton{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
+
+    
 }
