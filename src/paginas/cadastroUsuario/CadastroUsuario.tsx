@@ -113,7 +113,7 @@ function CadastroUsuario() {
                 <Box paddingX={10}>
 
                     <form onSubmit={cadastrar}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textoCadastrar'>Cadastrar</Typography>
 
                         <TextField className='registerName'
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
@@ -172,12 +172,12 @@ function CadastroUsuario() {
                             <Box className='separarBtn'>
                             <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar'>
-                                    Cancelar
+                                    Ja tenho conta
                                 </Button>
                             </Link>                           
                             
                             <Button className="btnCadastrar"type='submit' variant='contained' color='primary'>
-                                Cadastrar
+                                Criar conta
                             </Button>
                             </Box>
                         </Box>

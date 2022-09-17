@@ -67,7 +67,7 @@ function Login() {
             <Grid xs={6} alignItems='center'>
                 <Box className="formLogin" paddingX={20}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' align='center' className="texto"> ENTRAR </Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' align='center' className="textoEntrar"> ENTRAR </Typography>
                         <TextField className="loginBtn"value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='Usuario' variant='filled' name='usuario' margin='normal' fullWidth InputLabelProps={{
 'aria-label': 'weight'
   }}/>
@@ -76,17 +76,16 @@ function Login() {
                                 <Button className="logarBtn"type='submit' variant='contained'>
                                     Logar
                                 </Button>
-                        </Box>
-                    </form>
-                    <Box display='flex' justifyContent='center' marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
-                        </Box>
+                        
+                        
+                    
                         <Link to='/cadastro'>
-                            <Typography variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }}>Cadastre-se</Typography>
+                            <Button className="cadastroBtn"type='submit' variant='contained'>
+                            Criar Conta
+                            </Button>    
                         </Link>
                     </Box>
-
+                    </form>
                 </Box>
             </Grid>
             <Grid xs={6} style={{

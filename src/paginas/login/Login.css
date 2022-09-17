@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +7,10 @@
   }
   /* Fundo do login*/
   .containerMenu{
+    overflow: hidden;
     height: 100%;
     color: white;
-    background-color: #1d4269;
+    background-color: #4c6986;
     font-family: 'Roboto', sans-serif;
   }
   
@@ -46,7 +48,7 @@
 
  .loginBtn label{
     border-bottom-color: #53a2b9;
-    color: black !important;
+    color: white !important;
     margin-bottom: 5px;
  }
 
@@ -71,7 +73,7 @@
 
  .passBtn label {
     border-bottom-color: #53a2b9;
-    color: black !important;
+    color: white !important;
     margin-bottom: 5px;
  }
 
@@ -88,3 +90,22 @@
   }
 
 
+.cadastroBtn{
+  top:50% !important;
+  background-color:#f1963b !important;
+  color: #fff !important;
+  border:none !important; 
+  border-radius:15px !important; 
+  padding: 7px !important; 
+  min-height:30px !important; 
+  min-width: 120px !important;
+  margin-left: 40px !important;
+  transition: all 0.3s ease 0s;
+
+}
+
+
+
+.textoEntrar{
+  color: white !important;
+}

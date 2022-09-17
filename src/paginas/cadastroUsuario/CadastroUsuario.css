@@ -14,9 +14,9 @@
     min-height: 100vh;
 }
 
-.textos2{
+.textoCadastrar{
     font-family: 'Roboto', sans-serif;
-    color: #000000 !important; /* mudar cor do cadastrar*/
+    color: white !important; /* mudar cor do cadastrar*/
 }
 
 .wrapper {
@@ -39,7 +39,7 @@
 .registerPass2 label, 
 .registerUser label{
     border-bottom-color: #5380b1;
-    color: black !important;
+    color: white !important;
     margin-bottom: 5px;
 }
 
@@ -47,11 +47,11 @@
 
 .registerName{
     font-family: 'Roboto', sans-serif;
-  background-color: #4d647c;
+  background-color: #5b7897;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  border: 2px solid #3a5470;
+  border: 2px solid #5b7897;
   transition: 0.25s border;
   padding: 0 15px;
   height: 56px;
@@ -65,7 +65,7 @@
 
 .btnCancelar{
     top:50% !important;
-    background-color:#fd3737 !important;
+    background-color:#6ea2d6 !important;
     color: #fff !important;
     border:none !important; 
     border-radius:15px !important; 
@@ -76,19 +76,19 @@
 
 .btnCadastrar{
     top:50% !important;
-    background-color:#4d96ac !important;
+    background-color:#6ea2d6 !important;
     color: #fff !important;
     border:none !important; 
     border-radius:15px !important; 
     padding: 7px !important; 
     min-height:30px !important; 
     min-width: 120px !important;
-    margin-left: 20px !important;
+    margin-left: 30px !important;
 }
 
 .fundo{
     height: 100%;
     color: white;
-    background-color: #3a5470;
+    background-color: #24313d;
     font-family: 'Roboto', sans-serif
 }
