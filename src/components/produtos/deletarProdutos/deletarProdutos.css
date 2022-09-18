@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+
+    --cor01: #8c4905;
+    --cor02: #FFBB78;
+    --cor03: #EE8821;
+    --cor04: #2884A1;
+    --cor05: #93DEF5;
+
+    --Fontprincipal: 'Roboto', sans-serif;
+    --FontTitulo: 'Poppins', sans-serif;
+}
+
+.cardDelet{
+
+    width: 400px!important;
+    font-family: var(--FontTitulo) !important;
+    box-shadow: 7px 7px 13px rgba(50, 50, 50, 0.22) !important;
+    padding: 20px !important;
+    margin: 20px !important;
+    transition: all 0.3s ease-out !important;
+    border-left: 8px solid red !important;
+
+}
+
+.cardDelet:hover{
+    transform: translateY(-5px) !important;
+    /* cursor: pointer; */
+
+}
+.cardProductDelet{
+    margin-bottom: 15px;
+    font-family: var(--Fontprincipal) !important;
+    color: black;
+    font-size: 1.2em;
+    text-align: justify;
+    font-weight: bold;
+
+}
