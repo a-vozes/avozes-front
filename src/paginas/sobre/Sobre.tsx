@@ -54,7 +54,7 @@ function Sobre() {
                         <br />
                     </Box>
                 </Grid>
-                <Grid item xs={6} justifyContent="center" alignItems="center" padding={20}>
+                <Grid item xs={6} justifyContent="center" alignItems="center" className="zerar" >
                     <img src="https://i.ibb.co/Wy8BJQN/Untitled-1.gif" alt="" />
                 </Grid>
             </Grid>
