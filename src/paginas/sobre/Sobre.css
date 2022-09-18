@@ -7,3 +7,12 @@
 .zerar{
     padding: 0!important;
 }
+
+#img1{
+    max-width: 20%;
+    height: auto;
+}
+.margem{
+    padding-left: 20px;
+    padding-right: 60px;
+}
