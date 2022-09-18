@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import ListaCategoria from '../listaCategoria/ListaCategoria';
 import './TabCategorias.css';
+import CadastroCategoria from '../cadastroCategoria/CadastroCategoria';
 
 function TabProdutos() {
   const [value, setValue] = useState('1')
@@ -13,10 +14,10 @@ function TabProdutos() {
 return (
   <>
     <TabContext value={value}>
-      <AppBar position="static" style={{ background: "#2884A1" }}>
-        <Tabs centered indicatorColor="secondary" onChange={handleChange}>
-          <Tab label="Conselhos em destaque" value="1" />
-          <Tab label="Teste" value="2" className='bold-weight'/>
+      <AppBar className='appbar' position="relative" >
+        <Tabs centered onChange={handleChange}>
+          <Tab className='labelAppbar' label="Conexões em destaque" value="1" />
+          <Tab className='labelAppbar' label="Criar tipo de conexão" value="2" />
         </Tabs>
       </AppBar>
       <TabPanel value="1" >
@@ -24,12 +25,11 @@ return (
           <ListaCategoria />
         </Box>
       </TabPanel>
-      <TabPanel value="2">
-        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre Mim</Typography>
-        <Typography variant="body1" gutterBottom color="textPrimary" align="justify">
-        teste
-          </Typography>
-      </TabPanel>
+      <TabPanel value="2" >
+          <Box display="flex" flexWrap="wrap" justifyContent="center">
+            <CadastroCategoria />
+          </Box>
+        </TabPanel>
     </TabContext>
   </>
 );

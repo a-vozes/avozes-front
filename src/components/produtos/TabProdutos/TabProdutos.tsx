@@ -5,6 +5,7 @@ import { TabContext, TabPanel } from '@material-ui/lab';
 
 import ListaProdutos from '../listaProdutos/listaProdutos';
 import './TabProdutos.css';
+import CadastroProd from '../CadastroProd/CadastroProd';
 
 function TabProdutos() {
   const [value, setValue] = useState('1')
@@ -14,10 +15,10 @@ function TabProdutos() {
 return (
   <>
     <TabContext value={value}>
-      <AppBar position="static" style={{ background: "#74849C" }}>
-        <Tabs centered indicatorColor="secondary" onChange={handleChange}>
-          <Tab label="Todas as postagens" value="1" className='bold-weight'/>
-          <Tab label="Teste" value="2" className='bold-weight'/>
+      <AppBar  className='appbar' position="static">
+        <Tabs centered onChange={handleChange}>
+          <Tab className='labelAppbar' label="Avós" value="1" />
+          <Tab className='labelAppbar' label="Cadastro Avós" value="2" />
         </Tabs>
       </AppBar>
       <TabPanel value="1" >
@@ -26,10 +27,7 @@ return (
         </Box>
       </TabPanel>
       <TabPanel value="2">
-        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre Mim</Typography>
-        <Typography variant="body1" gutterBottom color="textPrimary" align="justify">
-        teste
-          </Typography>
+          <CadastroProd />
       </TabPanel>
     </TabContext>
   </>

@@ -40,29 +40,32 @@ function Home() {
   return (
     <>
       <Box className='container-home'>
-
-        {/* <Grid item xs={12}> Aqui está o carrossel
-          { <Lista /> }
+        {<Box> 
           <Carrossel />
-        </Grid> */}
-
-
-        <Box className='container-bv-btn'>
-          <Box>
-            <h2> Dando voz à voz da experiência. </h2>
+        </Box> }
+        <Box className="contBtnEimg">
+          <Box className='container-bv-btn'>
+            <Box className='marginText'>
+              <h2> Dando voz à voz da experiência. </h2>
+            </Box>
+            <Box className='bv-btn'>
+              <Button> CONHEÇA MAIS SOBRE NÓS... </Button>
+            </Box>
           </Box>
-          <Box className='bv-btn'>
-            <Button> CONHEÇA MAIS SOBRE NÓS... </Button>
+          <Box className='img-bv-home'>
+            <img src="https://cdn.discordapp.com/attachments/988429116711772194/1020023767252074607/chico.png" alt="" />
           </Box>
-        </Box>
-        <Box className='img-bv-home'>
-          <img src="https://cdn.discordapp.com/attachments/988429116711772194/1020023767252074607/chico.png" alt="" />
-        </Box>
+ 
+          </Box>
       </Box>
-
-      <Box>
+      <Box >
         <TabCategorias />
-      </Box>
+        </Box>
+        <Box >
+        <TabProdutos />
+        </Box>
+
+      
     </>
   );
 }

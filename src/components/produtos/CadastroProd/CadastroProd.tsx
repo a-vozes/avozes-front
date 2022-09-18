@@ -156,7 +156,7 @@ function CadastroProd() {
                   component="h1"
                   align="center"
                 >
-                  Cadastro de produto:
+                  Novo Vovô/Vovó:
                 </Typography>
                 <TextField
                   value={produto.nome}
@@ -221,7 +221,7 @@ function CadastroProd() {
                 value={produto.foto}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
                   id="foto"
-                  label="Insira o link da sua foto"
+                  label="Insira o link da foto"
                   name="foto"
                   variant="outlined"
                   placeholder="Insira no mínimo 5 caracteres"
@@ -249,7 +249,7 @@ function CadastroProd() {
                       <MenuItem value={cate.id}>{cate.tipoConselho}</MenuItem>
                     ))}
                   </Select>
-                  <FormHelperText>Escolha uma categoria para o produto.</FormHelperText>
+                  <FormHelperText>Escolha o tipo de conexão: </FormHelperText>
                   <Button type="submit" variant="contained" color="primary" className="btn">
                     Finalizar
                   </Button>
