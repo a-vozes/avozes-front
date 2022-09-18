@@ -8,10 +8,10 @@ import GithubIcon from '@mui/icons-material/GitHub';
 function Sobre() {
     return (
         <>
+            <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "black", fontWeight: "bold" , marginTop:"20px"}}>Sobre nós</Typography>
             <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#f9f8d6" }} paddingY={5}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "black", fontWeight: "bold" }}>Sobre nós</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "black", fontWeight: "bold" }}>Em menos de 4 anos o Brasil será o sexto país do mundo com a maior população idosa, segundo dados da OMS. A expectativa de vida deste grupo aumentou e é crescente a necessidade de cuidados e programas de proteção ao idoso. As consequências são em sua maioria psicológicas, principalmente para aqueles que sofrem  de abandono e precisam lidar com a rejeição dos próprios familiares, gerando sentimentos de impotência e até mesmo revolta. </Typography>
                         <br />
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "black", fontWeight: "bold" }}>Um pacto global assinado durante a Cúpula das Nações Unidas em 2015 pelos 193 países membros ficou conhecido como “Agenda 2030”. Nesta agenda existem 17 objetivos ambiciosos e interconectados, desdobrados em 169 metas, com foco em superar os principais desafios de desenvolvimento enfrentados por pessoas no Brasil e no mundo, promovendo o crescimento sustentável global até 2030. Estes objetivos ficaram conhecidos como “Objetivos de Desenvolvimento Sustentável” ou simplesmente ODS.
@@ -55,7 +55,9 @@ function Sobre() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} justifyContent="center" alignItems="center" className="zerar" >
-                    <img src="https://i.ibb.co/Wy8BJQN/Untitled-1.gif" alt="" />
+                    <p id="img1">
+                    <img src="https://i.ibb.co/Wy8BJQN/Untitled-1.gif" alt="" width="550px" />
+                    </p>
                 </Grid>
             </Grid>
             <Box display="flex" alignItems="center" justifyContent="center" paddingY={5} style={{ backgroundColor: "#f9f8d6" }}>
@@ -110,7 +112,7 @@ function Sobre() {
                         </ul>
                     </div>
                     <div className="cards cards--two">
-                        <img src="https://i.ibb.co/0VjXyjW/Whats-App-Image-2022-09-18-at-11-20-48.jpg" className="img-responsive" alt="Cards Image" />
+                        <img src="https://i.ibb.co/0XwCH7V/2.jpg" className="img-responsive" alt="Cards Image" />
                         <span className="cards--two__rect"></span>
                         <span className="cards--two__tri"></span>
                         <p>Lucas Caetano</p>
@@ -153,7 +155,7 @@ function Sobre() {
                         </ul>
                     </div>
                     <div className="cards cards--two">
-                        <img src="https://i.ibb.co/0VjXyjW/Whats-App-Image-2022-09-18-at-11-20-48.jpg" className="img-responsive" alt="Cards Image" />
+                        <img src="https://i.ibb.co/QM1cwCz/Whats-App-Image-2022-09-18-at-15-17-56.jpg" className="img-responsive" alt="Cards Image" />
                         <span className="cards--two__rect"></span>
                         <span className="cards--two__tri"></span>
                         <p>Nicolas</p>
