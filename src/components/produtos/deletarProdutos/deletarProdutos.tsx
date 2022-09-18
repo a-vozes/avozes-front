@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
+import { Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
 import { Box } from '@mui/material';
 import './deletarProdutos.css';
 import Produto from '../../../models/Produto';
@@ -30,8 +30,8 @@ function DeletarProdutos() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-        });
-        dispatch(addToken(token))
+      });
+      dispatch(addToken(token))
       navigate("/login");
     }
   }, [token]);
@@ -66,42 +66,44 @@ function DeletarProdutos() {
       draggable: false,
       theme: "colored",
       progress: undefined,
-      });
+    });
   }
 
   function nao() {
     navigate('/prods')
   }
-   
+
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined" >
-          <CardContent>
-            <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar o produto abaixo?
-              </Typography>
-              <Typography color="textSecondary" >
-              {prod?.nome}
-              </Typography>
-            </Box>
+      <Box m={2} display="flex" justifyContent="center">
 
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-              <Box mx={2}>
-              <Button onClick={sim}  variant="contained" className="marginLeft btnCancelar" color="primary">
+        <Card variant="outlined" className='cardDelet'>
+
+          <div className='cardProductDelet'>
+
+            <Typography color="textSecondary" gutterBottom>
+              Deseja deletar o cadastro do avô/avó abaixo?
+            </Typography>
+            <Typography color="textSecondary" >
+              {prod?.nome}
+            </Typography>
+
+          </div>
+
+          <Box display="flex" justifyContent="start" ml={1.0} mb={2}>
+
+          <Box mx={2}>
+              <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
                 Sim
               </Button>
-              </Box>
-              <Box>
-              <Button onClick={nao}  variant="contained" color="secondary" className='btn'>
-                Não
-              </Button>
-              </Box>
             </Box>
-          </CardActions>
+            <Box mx={2}>
+              <Button onClick={nao} variant="contained" size='large' color="secondary">
+                Não 
+              </Button>
+            </Box>
+
+          </Box>
         </Card>
       </Box>
     </>

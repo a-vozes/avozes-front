@@ -32,7 +32,7 @@ function ListaCategoria() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    });
+      });
       dispatch(addToken(token))
       history('/login')
     }
@@ -52,41 +52,47 @@ function ListaCategoria() {
   }, [categorias.length])
   return (
     <>
-      {
-        categorias.map(categorias => (
-          <Box m={2} >
-            <Card variant="outlined">
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Tipo de conselho
-                </Typography>
-                <Typography variant="h6" component="h2"  >
-                  {categorias.tipoConselho}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5} >
+      {categorias.map(categorias => (
 
-                  <Link to={`/formularioCategoria/${categorias.id}`} className="text-decorator-none">
-                    <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                        atualizar
-                      </Button>
-                    </Box>
-                  </Link>
-                  <Link to={`/deletarCategoria/${categorias.id}`} className="text-decorator-none">
-                    <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
-                        deletar
-                      </Button>
-                    </Box>
-                  </Link>
-                </Box>
-              </CardActions>
-            </Card>
-          </Box>
-        ))
-      }
+        <Box m={2} display="inline-block" justifyContent="center">
+
+          <Card variant="outlined" className='cardCategoria'>
+
+            <div className='cardCategoriaInfo'>
+              <Typography color="textSecondary" gutterBottom>
+                Tipo de conexão
+              </Typography>
+              <Typography variant="h6" component="h2"  >
+                {categorias.tipoConselho}
+              </Typography>
+            </div>
+            
+            <div>
+              <Box display="flex" justifyContent="center" mb={1.5} >
+
+                <Link to={`/formularioCategoria/${categorias.id}`} className="text-decorator-none">
+                  <Box mx={1}>
+                    <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      atualizar
+                    </Button>
+                  </Box>
+                </Link>
+                <Link to={`/deletarCategoria/${categorias.id}`} className="text-decorator-none">
+                  <Box mx={1}>
+                    <Button variant="contained" size='small' color="secondary">
+                      deletar
+                    </Button>
+                  </Box>
+                </Link>
+              </Box>
+
+            </div>
+
+          </Card>
+
+        </Box>
+
+      ))}
     </>
   );
 }
