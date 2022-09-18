@@ -17,7 +17,7 @@
     text-decoration: none;
 }
 .cardCategoria{
-    width: 400px!important;
+    width: 250px!important;
     font-family: var(--FontTitulo) !important;
     box-shadow: 7px 7px 13px rgba(50, 50, 50, 0.22) !important;
     padding: 20px !important;

@@ -40,7 +40,7 @@ function Home() {
   return (
     <>
       <Box className='container-home'>
-        {<Box> 
+        {<Box className='carrosel'> 
           <Carrossel />
         </Box> }
         <Box className="contBtnEimg">
