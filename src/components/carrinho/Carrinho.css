@@ -13,7 +13,7 @@
     --Fontprincipal: 'Roboto', sans-serif;
     --FontTitulo: 'Poppins', sans-serif;
 }
-.card{
+.cardProd{
     width: 400px!important;
     font-family: var(--FontTitulo) !important;
     box-shadow: 7px 7px 13px rgba(50, 50, 50, 0.22) !important;
@@ -23,7 +23,7 @@
     border-left: 8px solid var(--cor01) !important;
     
 }
-.card:hover{
+.cardProd:hover{
     transform: translateY(-5px) !important;
     /* cursor: pointer; */
 

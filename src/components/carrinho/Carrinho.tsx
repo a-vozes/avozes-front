@@ -126,7 +126,8 @@ function Carrinho() {
             
             <Box display="flex" justifyContent="center">
               <img src={produto.foto} alt="Img" className='img' />
-              </Box>
+            
+            </Box>
 
             <div className='cardProductInfo'>
 
