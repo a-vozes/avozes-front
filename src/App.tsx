@@ -46,7 +46,6 @@ function App() {
             <Route path="/formularioProd/:id" element={<CadastroProd />} />
             <Route path="/deletarProdutos/:id" element={<DeletarProdutos />} />
 
-
           </Routes>
         </div>
 
