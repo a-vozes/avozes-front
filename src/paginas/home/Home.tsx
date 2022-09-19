@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Typography, Box, Grid, Button } from '@mui/material';
 import './Home.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -48,10 +48,13 @@ function Home() {
             <Box className='marginText'>
               <h2> Dando voz à voz da experiência. </h2>
             </Box>
+            <Link to='/sobre'>
             <Box className='bv-btn'>
               <Button> CONHEÇA MAIS SOBRE NÓS... </Button>
             </Box>
+            </Link>
           </Box>
+          
           <Box className='img-bv-home'>
             <img src="https://cdn.discordapp.com/attachments/988429116711772194/1020023767252074607/chico.png" alt="" />
           </Box>

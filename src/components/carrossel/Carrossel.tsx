@@ -11,6 +11,7 @@ import "./Carrossel.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import { Link } from "react-router-dom";
 
 function Carrossel() {
 
