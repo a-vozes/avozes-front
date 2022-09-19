@@ -17,7 +17,7 @@ function NotFound() {
           }
         </p>
         <div className="btns">
-          <a href="https://open.spotify.com/playlist/4JTe5v87L5gbxDS0eo1tx0?si=adba9b5f252f43a5">Return home</a>
+          <a href="https://avozes.netlify.app/home">Return home</a>
         </div>
       </div>
     </div>
