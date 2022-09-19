@@ -83,15 +83,15 @@ function Login() {
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
                         <Link to='/cadastro'>
-                            <Typography variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }}>Cadastre-se</Typography>
+                            <Typography className='cadastrase' variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }}>Cadastre-se</Typography>
                         </Link>
                     </Box>
 
                 </Box>
             </Grid>
             <Grid xs={6} style={{
-                backgroundImage: `url(https://64.media.tumblr.com/f744d2d984a543e7dfc65f16f7a7c158/c9ceff694b7d0ee4-bc/s500x750/ebb19447948faf22f3d6881a176d71b40df52c99.gifv)`, backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: '300px'
+                backgroundImage: `url(https://i.ibb.co/0nz35Zj/Cuidar-de-quem-cuidou-de-voc.png)`, backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: '350px'
             }}>
 
             </Grid>

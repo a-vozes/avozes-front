@@ -8,8 +8,12 @@
   .containerMenu{
     height: 100%;
     color: white;
-    background-color: #1d4269;
+    background-color: #93DEF5;
     font-family: 'Roboto', sans-serif;
+  }
+
+  .texto {
+    color: white !important;
   }
   
   .wrapper {
@@ -85,6 +89,10 @@
     padding: 7px !important; 
     min-height:30px !important; 
     min-width: 120px !important;
+  }
+
+  .cadastrase {
+    color: #2884A1 !important;
   }
 
 
