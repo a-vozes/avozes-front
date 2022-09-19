@@ -18,15 +18,21 @@
 .labelAppbar {
     background-color: #2885a1 !important;
     color: black !important;
-    font-weight: bold !important;
-    font-size: 12px !important;
+    width: 15rem !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
     margin: 5px !important;
-
+    height: 0.5rem !important;
     border-style:solid !important;
     border-width:1px !important;
     border-color: black !important;
-
+    transition: transform 250ms !important; 
     border-radius: 10px !important;
+
+}
+
+.labelAppbar:hover {
+    transform: translateY(-2px);
 }
 
 .MuiTab-textColorInherit {
