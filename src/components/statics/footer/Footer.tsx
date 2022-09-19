@@ -14,7 +14,7 @@ function Footer() {
             <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Sobre nós </Typography>
             </Box>
-            <Typography  align="center" gutterBottom style={{ color: "white" }}>Somos uma plataforma para o mercado digital que viabiliza a conexão entre idosos e possíveis colaboradores, oferecendo conselhos e experiências de vida </Typography>
+            <Typography  align="center" gutterBottom style={{ color: "white" }}>Somos uma plataforma que viabiliza a conexão entre idosos e pessoas colaboradoras. Mais que uma simples doação, uma troca de experiências de vida </Typography>
             <Box display="flex" alignItems="center" justifyContent="center">
               <img src= "https://i.ibb.co/TrWMPXT/logo-preto-e-branco-2000px.png" alt = 'logo avozes' width='80px' height= '80px' />
               </Box>
