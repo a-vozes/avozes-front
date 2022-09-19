@@ -67,7 +67,7 @@ function Navbar() {
                         <Link to='/Categorias' className='navbarlink'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
                                 <Typography variant="h6" color="inherit">
-                                    Conselhos
+                                    Conexões
                                 </Typography>
                             </Box>
                         </Link>
@@ -75,7 +75,7 @@ function Navbar() {
                         <Link to='/formularioCategoria' className='navbarlink'>
                             <Box mx={1} style={{ cursor: "pointer" }}>
                                 <Typography variant="h6" color="inherit">
-                                    Novo conselho
+                                    Nova conexão
                                 </Typography>
                             </Box>
                         </Link>
