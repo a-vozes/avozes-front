@@ -66,10 +66,6 @@ function ListaProdutos() {
 
             <div className='cardProduct'>
 
-              <Typography color="textSecondary" gutterBottom>
-                Nossos avós...
-              </Typography>
-
               <Box display="flex" justifyContent="center">
                 <img src={prod.foto} alt="Img" className='img' />
               </Box>
@@ -124,7 +120,6 @@ function ListaProdutos() {
                         variant="contained"
                         size="small"
                         color="secondary"
-                        className="btnCancelar"
                       >
                         deletar
                       </Button>
@@ -134,8 +129,8 @@ function ListaProdutos() {
                   <Box display="flex" flexDirection="column" justifyContent="center" mb={1.5}>
                     <Link to={`/carrinho/${prod.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" size='small' color="secondary">
-                          Comprar
+                        <Button className="btnComprar" variant="contained" size='small'>
+                          Conectar
                         </Button>
                       </Box>
                     </Link>

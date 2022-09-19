@@ -103,7 +103,7 @@ function Carrinho() {
 
   // Função que simula a compra Efetuada com sucesso
   function confirmSales() {
-    toast.success('Compra Confirmada! Verifique o seu email!', {
+    toast.success('Conexão Confirmada! Verifique o seu email!', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -178,7 +178,7 @@ function Carrinho() {
                 <Box className="cardProductButton" >
                   <Box mx={1}>
                     <Button onClick={confirmSales} variant="contained" size='small' color="primary">
-                      Confimar Compra
+                      Confimar Conexão
                     </Button>
                   </Box>
                 </Box>

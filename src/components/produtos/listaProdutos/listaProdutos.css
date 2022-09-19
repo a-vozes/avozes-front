@@ -30,10 +30,10 @@
 .cardProductInfo{
   display: flex !important;
   flex-direction: column !important;
+  align-items: left !important;
   color: #a3a5ae !important;
   font-size: 12px !important;
   text-align: left;
-
   margin-left: px !important;
   width: 250px !important;
   font-family: var(--Fontprincipal) !important;
@@ -44,25 +44,33 @@
   float: right;
   max-width: 200px;
   max-height: 200px;
+  border-radius: 15px !important;
 }
 .Nome{
   font-family: var(--Fontprincipal) !important;
   color: black;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.188);
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 .Desc{
   font-family: var(--Fontprincipal) !important;
   color: black;
-  font-size: 1.2em;
-  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.0em;
+  text-align: justify !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
 
 }
 .Cat{
   font-family: var(--Fontprincipal) !important;
   color: var(--cor01);
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.4em !important;
+  margin-top: 5px !important;
 
 }
 
@@ -72,6 +80,11 @@
   
 
   
+}
+
+.btnComprar {
+  background-color: #2884A1 !important;
+  color: white !important;
 }
 
 
