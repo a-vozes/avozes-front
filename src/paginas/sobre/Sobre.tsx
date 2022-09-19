@@ -84,7 +84,7 @@ function Sobre() {
                         </ul>
                     </div>
                     <div className="cards cards--two">
-                        <img src="https://i.ibb.co/0VjXyjW/Whats-App-Image-2022-09-18-at-11-20-48.jpg" className="img-responsive" alt="Cards Image" />
+                        <img src="https://i.ibb.co/zsdKTp0/Whats-App-Image-2022-09-19-at-01-17-53.jpg" className="img-responsive" alt="Cards Image" />
                         <span className="cards--two__rect"></span>
                         <span className="cards--two__tri"></span>
                         <p>Cinthia Balbino</p>
