@@ -84,7 +84,7 @@ function Sobre() {
                         </ul>
                     </div>
                     <div className="cards cards--two">
-                        <img src="https://i.ibb.co/0VjXyjW/Whats-App-Image-2022-09-18-at-11-20-48.jpg" className="img-responsive" alt="Cards Image" />
+                        <img src="https://i.ibb.co/zsdKTp0/Whats-App-Image-2022-09-19-at-01-17-53.jpg" className="img-responsive" alt="Cards Image" />
                         <span className="cards--two__rect"></span>
                         <span className="cards--two__tri"></span>
                         <p>Cinthia Balbino</p>
@@ -144,7 +144,7 @@ function Sobre() {
                         <img src="https://i.ibb.co/CtXPQMQ/formatura-gen.jpg" className="img-responsive" alt="Cards Image" />
                         <span className="cards--two__rect"></span>
                         <span className="cards--two__tri"></span>
-                        <p>Matheus</p>
+                        <p>Matheus Mota</p>
                         <ul className="cards__list">
                         <li><i><a href="https://github.com/omatheusmota" target="_blank">
                                 <GithubIcon style={{ fontSize: 20, color: "white" }} />
@@ -158,7 +158,7 @@ function Sobre() {
                         <img src="https://i.ibb.co/QM1cwCz/Whats-App-Image-2022-09-18-at-15-17-56.jpg" className="img-responsive" alt="Cards Image" />
                         <span className="cards--two__rect"></span>
                         <span className="cards--two__tri"></span>
-                        <p>Nicolas</p>
+                        <p>Nicolas Alves</p>
                         <ul className="cards__list">
                         <li><i><a href="https://github.com/Gloower" target="_blank">
                                 <GithubIcon style={{ fontSize: 20, color: "white" }} />
