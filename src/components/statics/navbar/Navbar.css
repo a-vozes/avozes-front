@@ -14,6 +14,10 @@
     --Fontprincipal: 'Roboto', sans-serif;
 }
 
+.css-6tsndk {
+    background-image: linear-gradient(to left, var(--cor01), var(--cor02)) !important;
+}
+
 .css-hip9hq-MuiPaper-root-MuiAppBar-root {
 
     background-image: linear-gradient(to left, var(--cor01), var(--cor02)) !important;

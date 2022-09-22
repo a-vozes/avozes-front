@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "./Carrossel.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 import { Link } from "react-router-dom";
 
 function Carrossel() {
@@ -27,11 +27,15 @@ function Carrossel() {
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
                 pagination={{
                     clickable: true,
                 }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation, Autoplay]}
                 className="mySwiper"
             >
 
