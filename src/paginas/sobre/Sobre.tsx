@@ -155,7 +155,7 @@ function Sobre() {
                         </ul>
                     </div>
                     <div className="cards cards--two">
-                        <img src="https://i.ibb.co/QM1cwCz/Whats-App-Image-2022-09-18-at-15-17-56.jpg" className="img-responsive" alt="Cards Image" />
+                        <img src="https://i.imgur.com/mLAiLHf.jpg" className="img-responsive" alt="Cards Image" />
                         <span className="cards--two__rect"></span>
                         <span className="cards--two__tri"></span>
                         <p>Nicolas Alves</p>
