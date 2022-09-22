@@ -113,13 +113,13 @@ function CadastroUsuario() {
                 <Box paddingX={10}>
 
                     <form onSubmit={cadastrar}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>CADASTRAR</Typography>
 
                         <TextField className='registerName'
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             value={user.nome}
                             id='nome'
-                            label='nome'
+                            label='Nome'
                             variant='filled'
                             name='nome'
                             margin='normal'
@@ -131,7 +131,7 @@ function CadastroUsuario() {
                             value={user.usuario}
                             type="email"
                             id='usuario'
-                            label='usuario'
+                            label='Usuario'
                             variant='filled'
                             name='usuario'
                             margin='normal'
@@ -142,7 +142,7 @@ function CadastroUsuario() {
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             value={user.senha}
                             id='senha'
-                            label='senha'
+                            label='Senha'
                             variant='filled'
                             name='senha'
                             margin='normal' type='password'
@@ -152,7 +152,7 @@ function CadastroUsuario() {
                             onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
                             value={confirmarSenha}
                             id='confirmarSenha'
-                            label='confirmarSenha'
+                            label='Confirmar Senha'
                             variant='filled'
                             name='confirmarSenha'
                             margin='normal' type='password'
@@ -162,7 +162,7 @@ function CadastroUsuario() {
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             value={user.foto}
                             id='foto'
-                            label='foto'
+                            label='Foto'
                             variant='filled'
                             name='foto'
                             margin='normal'

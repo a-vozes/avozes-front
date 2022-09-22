@@ -6,17 +6,17 @@
   }
 
 .imagem{
-    background-image: url(https://64.media.tumblr.com/f744d2d984a543e7dfc65f16f7a7c158/c9ceff694b7d0ee4-bc/s500x750/ebb19447948faf22f3d6881a176d71b40df52c99.gifv);
+    background-image: url(https://64.media.tumblr.com/8d3ad75b0ae93872e6ebffa77e6229b3/2284ca1c9c4270ac-91/s1280x1920/3d724880c1be90755feda802155381f23072a8b1.gifv);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 300px;
+    background-size: 500px;
     width: 100vh;
     min-height: 100vh;
 }
 
 .textos2{
     font-family: 'Roboto', sans-serif;
-    color: #000000 !important; /* mudar cor do cadastrar*/
+    color: #ffffff !important; /* mudar cor do cadastrar*/
 }
 
 .wrapper {
@@ -45,13 +45,13 @@
 
 
 
-.registerName{
+.registerName {
     font-family: 'Roboto', sans-serif;
-  background-color: #4d647c;
+  background-color: #96bce6;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  border: 2px solid #3a5470;
+  border: 2px solid #96bce6;
   transition: 0.25s border;
   padding: 0 15px;
   height: 56px;
@@ -60,7 +60,13 @@
   font-size: 15px;
   margin-top: 5px;
   margin-left: 20px;
-  transition: 0.25s color
+  transition: 0.25s color;
+  filter: blur(px);
+}
+
+.registerName label{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.788) !important;
 }
 
 .btnCancelar{
@@ -89,6 +95,6 @@
 .fundo{
     height: 100%;
     color: white;
-    background-color: #3a5470;
+    background-color: #b0d5e1;
     font-family: 'Roboto', sans-serif
 }

@@ -16,8 +16,8 @@ function Sobre() {
                         Sobre nós
                     </Typography>
 
-                    <Typography  className='texto2' variant="h4" gutterBottom color="textPrimary" component="h5" align="center">
-                    Dando voz à voz da experiência.
+                    <Typography className='texto2' variant="h4" gutterBottom color="textPrimary" component="h5" align="center">
+                        Dando voz à voz da experiência.
                     </Typography>
 
 
@@ -49,20 +49,20 @@ function Sobre() {
                         <Typography className='sobreTextoSobre' variant="h5" gutterBottom color="textPrimary" component="h5" >Somos um e-commerce que oferta conexões com a vida dessas pessoas que tem uma grande bagagem cultural e muitas experiências. </Typography>
                         <Typography className='sobreTextoSobre' variant="h5" gutterBottom color="textPrimary" component="h5" >A ideia é que as pessoas possam comprar uma sessão de conversa com um idoso e, assim, ajudar a manter a saúde mental dessas pessoas que estão em situação de vulnerabilidade. </Typography>
                         <Typography className='sobreTextoSobre' variant="h5" gutterBottom color="textPrimary" component="h5" >Além disso, o dinheiro arrecadado pelo Avozes será revertido em produtos de higiene e limpeza, roupas,entre outros, para asilos e abrigos. </Typography>
-                    
+
                     </div>
 
                 </Box>
 
                 <Box display="flex" alignItems="center" justifyContent="center" paddingY={5} style={{ backgroundColor: "#f9f8d6" }}>
                     <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "black", fontWeight: "bold" }}>Instituições parceiras</Typography>
-                
+
                 </Box>
                 <Grid display="flex" alignItems="center" justifyContent="center">
-                <img src="https://images-ext-1.discordapp.net/external/9_5D7zG6pAD46YomnsfdNwrgPiYsLnBjh_b6PUo4FS8/https/i.ibb.co/D963m6t/0d5fa2be-494d-4c0d-967d-e8fab22ac496.png" alt="" className='sobreImg3' />
+                    <img src="https://images-ext-1.discordapp.net/external/9_5D7zG6pAD46YomnsfdNwrgPiYsLnBjh_b6PUo4FS8/https/i.ibb.co/D963m6t/0d5fa2be-494d-4c0d-967d-e8fab22ac496.png" alt="" className='sobreImg3' />
                     <img src="https://i.ibb.co/gr87DHh/logo2-transparente.png" alt="" className='sobreImg2' />
                     <img src="https://i.ibb.co/m0R4LW7/logo1-transparente.png" alt="" className='sobreImg2' />
-                    
+
                 </Grid>
 
 

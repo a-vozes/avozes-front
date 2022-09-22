@@ -17,7 +17,7 @@ function Carrossel() {
 
     var items = [
         { img: "https://i.ibb.co/Vx3LRwr/AVOZES-1.png" },
-        { img: "https://i.ibb.co/8sM60kn/AVOZES-2.png" },
+        { img: "https://i.ibb.co/8sM60kn/AVOZES-2.png"},
         { img: "https://i.ibb.co/GPTvW2r/AVOZES-4.png" }
     ]
 
