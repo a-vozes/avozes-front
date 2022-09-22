@@ -43,6 +43,7 @@ function Home() {
         {<Box className='carrosel'> 
           <Carrossel />
         </Box> }
+        
         <Box className="contBtnEimg">
           <Box className='container-bv-btn'>
             <Box className='marginText'>
@@ -62,13 +63,14 @@ function Home() {
           </Box>
       </Box>
       <Box >
+        
+        </Box>
+        <TabProdutos />
+        <Box >
+        
         <TabCategorias />
         </Box>
-        <Box >
-        <TabProdutos />
-        </Box>
 
-      
     </>
   );
 }
