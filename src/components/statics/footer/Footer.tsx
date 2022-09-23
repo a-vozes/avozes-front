@@ -49,9 +49,9 @@ function Footer() {
           
         </Grid>
         <Box>
-          <p className="copyright-text fundo">© 2022 Copyright: Avozes - Todos os direitos reservados
+          <p className="copyright-text fundoFooter">© 2022 Copyright: Avozes - Todos os direitos reservados
               </p>
-              <p className="copyright-text fundo">brasil.generation.org</p>
+              <p className="copyright-text fundoFooter">brasil.generation.org</p>
         </Box>
       </footer>
     </>
