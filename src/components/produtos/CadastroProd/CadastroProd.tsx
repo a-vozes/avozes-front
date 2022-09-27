@@ -112,7 +112,7 @@ function CadastroProd() {
           'Authorization': token
         }
       })
-      toast.success('Produto atualizado com sucesso!', {
+      toast.success('Conexão atualizada com sucesso!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -129,7 +129,7 @@ function CadastroProd() {
           'Authorization': token
         }
       })
-      toast.success('Produto cadastrado com sucesso!', {
+      toast.success('Conexão cadastrada com sucesso!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
